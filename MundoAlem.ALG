@@ -24,32 +24,39 @@ Inicio
     escreva("seu destino: ")
     leia(destino_cliente)
 
-    vetor_cli[cont_cli]<-nome_cliente
-    res1<- vetor_cli[cont_cli]
-    vetor_dest[cont_dest]<-destino_cliente
-    res2<-vetor_dest[cont_dest]
+     vetor_cli[cont_cli]<-nome_cliente
+      res1<- vetor_cli[cont_cli]
+     vetor_dest[cont_dest]<-destino_cliente
+      res2<-vetor_dest[cont_dest]
+    
     escreval("Nome: ",res1, " Destino: ",res2)
       cont_cli<-cont_cli+1
       cont_dest<-cont_dest+1
+      
     escreval()
     escreval("Selecione a opção: 1 - Cadastrar  2 - Pesquisar 3 - Cancelar")
     leia(opcao)
     fimenquanto
+    
    caso 2
         escreva("Digite o nome ou destino procurado: ")
         leia(procurado)
+        
          ind<-0
+         
         para ind de min_cliente ate max_cliente faca
-        para ind de min_destino ate max_destino faca
-        se ((vetor_cli[ind] = procurado) ou (vetor_dest[ind] = procurado)) entao
+         para ind de min_destino ate max_destino faca
+          se ((vetor_cli[ind] = procurado) ou (vetor_dest[ind] = procurado)) entao
+          
             res1 <-  vetor_cli[ind]
             res2 <- vetor_dest[ind]
+            
             escreval("Nome: ", res1, " Destino: ", res2)
             senao
               escreval("Não Encontrado")
-        fimse
+          fimse
              ind <- ind+1
-        fimpara
+         fimpara
         fimpara
         
         escreval("Selecione a opção: 1 - Cadastrar  2 - Pesquisar 3 - Cancelar")
@@ -62,6 +69,7 @@ Inicio
          
          escreval("Selecione a opção: 1 - Cadastrar  2 - Pesquisar 3 - Cancelar")
          leia(opcao)
+         
   fimescolha
   fimenquanto
 Fimalgoritmo
